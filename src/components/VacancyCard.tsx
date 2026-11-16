@@ -2,13 +2,6 @@ import type { Vacancy } from '../types/vacancy';
 import { useState } from 'react';
 import './VacancyCard.css';
 
-/*interface VacancyCardProps {
-    title: string;
-    company: string;
-    modality: string;
-    salary: number;
-}*/
-
 interface VacancyCardProps {
     vacancy: Vacancy;
 }
@@ -23,7 +16,7 @@ export const VacancyCard = ({ vacancy }: VacancyCardProps) => {
   }
   return (
     <article className='vacancy-card'>
-        <p className='vacancy-card-company'>{vacancy.company}</p>
+        <p className='vacancy-card-company'>{vacancy.companyName}</p>
         <h3 className='vacancy-card-title'>{vacancy.title}</h3>
         <div className='vacancy-card-footer'>
             <span className='vacancy-card-modality'>{vacancy.modality}</span>
